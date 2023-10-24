@@ -13,7 +13,7 @@ public class Helth_Pic : MonoBehaviour
 
       Destroy(this.transform.parent.gameObject);
 
-        Debug.Log("Item collected !!");
+        Debug.Log("Health collected !!");
 
 
     }

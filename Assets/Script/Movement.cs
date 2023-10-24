@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
    public float movespeed = 10f;
    public float rotatespeed = 75f;
    public float speed = 5f;
-   public float bulletspeed = 100f;
+   public float bulletspeed = 1000f;
 
    public float jumpVelocity = 5f;
    public float distanceToGround = 0.1f;
@@ -64,11 +64,13 @@ rb.AddForce(Vector3.up * jumpVelocity,ForceMode.Impulse );
 if ( Input.GetMouseButtonDown(0))
 {
 
-GameObject Bullet = Instantiate( bullet, this.transform.position + new Vector3 (1,0,0 ), this.transform.rotation);
+GameObject Bullet = Instantiate( bullet, this.transform.position + new Vector3 (1,0,0 ), this.transform.rotation) as GameObject;// А не префабом а игровым обьектом
 
 Rigidbody bulletrb = Bullet.GetComponent<Rigidbody>();
 
 bulletrb.velocity = this.transform.forward * bulletspeed;
+
+
 
 
 }
