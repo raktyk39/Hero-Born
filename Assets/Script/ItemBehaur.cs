@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class ItemBehaur : MonoBehaviour
 {
-
-       public PlayerManager playerManager ; 
-
-
-
+    public PlayerManager playerManager ; 
+       
     void Start()
     {
         playerManager = GameObject.Find("GameManager").GetComponent<PlayerManager>();

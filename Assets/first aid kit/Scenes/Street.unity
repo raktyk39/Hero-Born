@@ -245,7 +245,7 @@ Transform:
   m_GameObject: {fileID: 233314635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.23701365, w: 0.97150636}
-  m_LocalPosition: {x: 71.56114, y: -24.19307, z: 131.28476}
+  m_LocalPosition: {x: 72, y: -24, z: 130}
   m_LocalScale: {x: 2.3317, y: 1, z: 3.3077}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -383,15 +383,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1305217080}
-  - {fileID: 233314636}
-  - {fileID: 490742290}
-  - {fileID: 976984854}
-  - {fileID: 674312201}
-  - {fileID: 1211830387}
-  - {fileID: 1208875570}
-  - {fileID: 1483300398}
   - {fileID: 1576510383}
+  - {fileID: 1483300398}
+  - {fileID: 1208875570}
+  - {fileID: 1211830387}
+  - {fileID: 674312201}
+  - {fileID: 976984854}
+  - {fileID: 490742290}
+  - {fileID: 233314636}
+  - {fileID: 1305217080}
   - {fileID: 1473969544}
   - {fileID: 1084890075}
   - {fileID: 779447761}
@@ -441,7 +441,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.16759574, y: 0.6869583, z: 0.16759574, w: 0.6869583}
   m_LocalPosition: {x: 98.401146, y: -24.26307, z: 158.12476}
-  m_LocalScale: {x: 2.3317, y: 1, z: 3.2203767}
+  m_LocalScale: {x: 2.3317006, y: 1, z: 3.220378}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 398658089}
@@ -785,7 +785,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.23344511, y: -0.97236973, z: 0.00045866604, w: 0.00052720873}
   m_LocalPosition: {x: 124.94115, y: -24.10307, z: 131.59476}
-  m_LocalScale: {x: 2.3317, y: 1, z: 3.3077002}
+  m_LocalScale: {x: 2.3317, y: 1, z: 3.3077006}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 398658089}
@@ -1418,7 +1418,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &888698577
 MeshCollider:
@@ -1567,7 +1567,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.16759574, y: 0.6869583, z: -0.16759574, w: 0.6869583}
   m_LocalPosition: {x: 97.84114, y: -24.09307, z: 104.654755}
-  m_LocalScale: {x: 2.3317, y: 1, z: 3.2203767}
+  m_LocalScale: {x: 2.3317006, y: 1, z: 3.220378}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 398658089}
@@ -3155,7 +3155,7 @@ Transform:
   m_GameObject: {fileID: 1683984840}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.36662367, z: -0, w: 0.9303694}
-  m_LocalPosition: {x: -743.2, y: 27.8, z: -586.1}
+  m_LocalPosition: {x: -741, y: 27.8, z: -589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3876,6 +3876,7 @@ MonoBehaviour:
   labelText: 'Collect all 4 items and win your freedom! '
   maxItem: 4
   showWinScreen: 0
+  showLossScreen: 0
 --- !u!4 &2065230276
 Transform:
   m_ObjectHideFlags: 0
@@ -4012,7 +4013,7 @@ GameObject:
   - component: {fileID: 2139488471}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4046,7 +4047,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -4129,7 +4130,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 15
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
