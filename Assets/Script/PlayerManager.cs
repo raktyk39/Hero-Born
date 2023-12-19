@@ -5,14 +5,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour,IManager
 { 
   [SerializeField]
   private int _itemCollected;
+  private string _state;
   public string  labelText = "Collect all 4 items and win your freedom! ";
   public int maxItem = 4;
   public bool showWinScreen;
   public bool showLossScreen;
+
+  public string State
+  {
+    get { return _state;}
+    set { _state = value;}
+  }
+
+  void Start()
+  {
+    Intialize();
+  }
 
   public int Items
   {
@@ -58,10 +70,10 @@ public class PlayerManager : MonoBehaviour
     }
   }
 
-  void RestartLevel()
+  public void Intialize()
   {
-    SceneManager.LoadScene(0);
-    Time.timeScale = 1.0f;
+    _state = "Manger intialized..";
+    Debug.Log(_state);
   }
 
   void OnGUI () 
@@ -75,11 +87,11 @@ public class PlayerManager : MonoBehaviour
 
       GUI.Label ( new Rect (Screen.width / 2 - 100,  Screen.height - 50,300,50), labelText);
 
-    if (showWinScreen) 
+    if (showWinScreen) // В условиях по умолчанию true
     {
-        if (GUI.Button(new Rect (Screen.width/2 - 100, Screen.height/2 - 50, 200,100), "You WON!"))  
+        if (GUI.Button(new Rect (Screen.width/2 - 100, Screen.height/2 - 50, 200,100), "You WON!"))  // Если кнопка нажата то пройсходит...
         {
-          RestartLevel();
+          Utilities.RestartLevel(0);
         }
     }
 
@@ -88,7 +100,7 @@ public class PlayerManager : MonoBehaviour
       if(GUI.Button(new Rect(Screen.width / 2 - 100,
         Screen.height / 2 - 50, 200,100), "You lose..."))
       {
-        RestartLevel();
+        Utilities.RestartLevel();
       }
     }
   }

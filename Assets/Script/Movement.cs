@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,8 +41,9 @@ public class Movement : MonoBehaviour
             
         if ( IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
-        rb.AddForce(Vector3.up * jumpVelocity,ForceMode.Impulse );
-        }
+            rb.AddForce(Vector3.up * jumpVelocity,ForceMode.Impulse );
+        }   
+        
         if ( Input.GetMouseButtonDown(0))
         {
             GameObject Bullet = Instantiate( bullet, this.transform.position + new Vector3 (1,0,0 ), this.transform.rotation) as GameObject;// А не префабом а игровым обьектом
@@ -67,7 +67,7 @@ public class Movement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Enemy")
+        if(collision.gameObject.tag == "Enemy")
         {
             Debug.Log("Enemi gonna Atack");
             _gameManager.HP -=1;        
