@@ -13,14 +13,14 @@ public class ItemBehaur : MonoBehaviour
 
       
    void OnCollisionEnter(Collision collision)
- {
-     if (collision.gameObject.name == "Player")
- {
-    Debug.Log("Item collected!");
-    Destroy(this.transform.gameObject);
+    {
+            if (collision.gameObject.name == "Player")
+        {
+            Debug.Log("Item collected!");
+            Destroy(this.transform.gameObject);
 
- 
- playerManager.Items += 1;
- }
-}
+        
+        playerManager.Items += 1;
+        }
+    }
 }

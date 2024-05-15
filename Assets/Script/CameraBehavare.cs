@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CameraBehavare : MonoBehaviour
 {
-     public Vector3 compOffpofSet  = new Vector3 (0f,1.2f , - 2.5f ); 
+    public Vector3 compOffpofSet  = new Vector3 (0f,1.2f , - 2.5f ); 
 
-      public Transform target ;
+    public Transform target ;
 
 
     void Start()

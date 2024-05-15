@@ -26,6 +26,12 @@ public class PlayerManager : MonoBehaviour,IManager
     Intialize();
   }
 
+   public void Intialize()
+  {
+    _state = "Manger intialized..";
+    Debug.Log(_state);
+  }
+
   public int Items
   {
     get { return _itemCollected; }
@@ -68,12 +74,6 @@ public class PlayerManager : MonoBehaviour,IManager
           labelText = "Ouch... that’s got hurt.";
         }
     }
-  }
-
-  public void Intialize()
-  {
-    _state = "Manger intialized..";
-    Debug.Log(_state);
   }
 
   void OnGUI () 
